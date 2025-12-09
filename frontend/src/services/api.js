@@ -4,6 +4,12 @@ const API_BASE = import.meta.env.VITE_API_URL
     ? `${import.meta.env.VITE_API_URL}/api`
     : '/api';
 
+console.log('🔌 API Configuration:', {
+    mode: import.meta.env.MODE,
+    base: API_BASE,
+    envUrl: import.meta.env.VITE_API_URL
+});
+
 // Create axios instance with retry logic
 const api = axios.create({
     baseURL: API_BASE,
